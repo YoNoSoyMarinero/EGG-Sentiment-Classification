@@ -1,0 +1,49 @@
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter notebook specific
+.ipynb_checkpoints/
+
+# Exclude data files
+*.npy
+*.csv
+*.cnt
+
+# Virtual environment
+venv/
+env/
+*.env/
+
+# IDE files
+.vscode/
+.idea/
+
+# Compiled Python files
+*.pyc
+
+# Logs
+*.log
+
+# Ignore system generated files
+.DS_Store
+Thumbs.db
+
+# Exclude local configuration
+*.local
+*.sqlite
+
+# Exclude environment variables file
+.env
+
+# Exclude compiled Python bytecode
+__pycache__/
+*.pyc
+
+# Exclude Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Exclude pycache directories
+__pycache__/
