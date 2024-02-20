@@ -5,9 +5,9 @@ from sklearn.metrics import accuracy_score
 import pickle
 
 
-train_df = pd.read_csv('data/dataset/train.csv')
-val_df = pd.read_csv('data/dataset/val.csv')
-test_df = pd.read_csv('data/dataset/test.csv')
+train_df = pd.read_csv('data/dataset_2000/train.csv')
+val_df = pd.read_csv('data/dataset_2000/val.csv')
+test_df = pd.read_csv('data/dataset_2000/test.csv')
 
 print(f"Train shape: {train_df.shape}")
 print(f"Test shape: {test_df.shape}")
@@ -33,11 +33,10 @@ y_test = test_df['label']
 X_val = val_df.drop('label', axis=1)
 y_val = val_df['label']
 
-params = {'C': 1, 'kernel': 'rbf'}
 
-model = SVC(C=params['C'], kernel=params['kernel'], verbose=3)
+model = SVC(C=1, kernel='rbf')
 model.fit(X_train, y_train)
-with open('svm_model_1_rbf.pkl', 'wb') as model_file:
+with open('models/svm_model_1_rbf.pkl', 'wb') as model_file:
     pickle.dump(model, model_file)
 
 y_pred = model.predict(X_val)
